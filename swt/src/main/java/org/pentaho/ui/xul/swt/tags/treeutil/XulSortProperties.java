@@ -18,9 +18,9 @@
 package org.pentaho.ui.xul.swt.tags.treeutil;
 
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.commons.collections.map.HashedMap;
 import org.eclipse.swt.widgets.Item;
 import org.pentaho.ui.xul.util.SortDirection;
 
@@ -59,7 +59,7 @@ public class XulSortProperties {
 
   private Comparator activeComparator = null;
 
-  private Map sortMethods = new HashedMap();
+  private Map sortMethods = new HashMap<>();
 
   public boolean isSortable() {
     return sortable;

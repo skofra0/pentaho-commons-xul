@@ -29,7 +29,7 @@ public class BindingUtil {
   private static final Log logger = LogFactory.getLog( BindingUtil.class );
 
   public static List<InlineBindingExpression> getBindingExpressions( String bindingText ) {
-    List<InlineBindingExpression> exps = new ArrayList<InlineBindingExpression>();
+    List<InlineBindingExpression> exps = new ArrayList<>();
     for ( String bindingExpText : bindingText.split( "," ) ) {
       exps.add( new InlineBindingExpression( bindingExpText.trim() ) );
     }
