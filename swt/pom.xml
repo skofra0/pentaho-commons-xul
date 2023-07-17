@@ -16,10 +16,6 @@
 		<version>9.6.0</version>
 	</parent>
 
-	<properties>
-		<commons-collections.version>3.2.2</commons-collections.version>
-	</properties>
-
 	<dependencies>
 		<!-- compile -->
 		<dependency>
@@ -30,10 +26,6 @@
 		<dependency>
 			<groupId>org.dom4j</groupId>
 			<artifactId>dom4j</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>commons-collections</groupId>
-		    <artifactId>commons-collections</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.google.guava</groupId>
