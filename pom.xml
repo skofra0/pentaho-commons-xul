@@ -32,8 +32,7 @@
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<maven.build.timestamp.format>yyyy-MM-dd hh.mm.ss</maven.build.timestamp.format>
-		<maven-surefire-plugin.argLine>-Duser.timezone=UTC -Dfile.encoding=UTF-8
-			-Duser.language=en -Duser.country=US</maven-surefire-plugin.argLine>
+		<maven-surefire-plugin.argLine>-Duser.timezone=UTC -Dfile.encoding=UTF-8 -Duser.language=en -Duser.country=US</maven-surefire-plugin.argLine>
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<license.licenseName>lgpl_v2_1</license.licenseName>
 
@@ -54,14 +53,12 @@
 		<mockito.version>5.4.0</mockito.version>
 		<hamcrest.version>2.2</hamcrest.version>
 		<junit.version>4.13.2</junit.version>
-		<sonar.coverage.jacoco.xmlReportPaths>
-			${project.basedir}/../assemblies/core/lib/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+		<sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/../assemblies/core/lib/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
 		<mockito-core.version>4.11.0</mockito-core.version>
 	</properties>
 
 	<scm>
-		<developerConnection>
-			scm:git:git@github.com:pentaho/pentaho-commons-xul.git</developerConnection>
+		<developerConnection>scm:git:git@github.com:skofra0/pentaho-commons-xul.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 
@@ -309,8 +306,7 @@
 				<artifactId>versions-maven-plugin</artifactId>
 				<version>2.15.0</version>
 				<configuration>
-					<rulesUri>
-						file://${maven.multiModuleProjectDirectory}/rules.xml</rulesUri>
+					<rulesUri>file://${maven.multiModuleProjectDirectory}/rules.xml</rulesUri>
 				</configuration>
 			</plugin>
 			<plugin>
