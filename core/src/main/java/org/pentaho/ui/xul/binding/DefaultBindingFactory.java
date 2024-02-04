@@ -27,62 +27,55 @@ public class DefaultBindingFactory implements BindingFactory {
 
   private BindingExceptionHandler exceptionHandler;
 
-  public void setDocument( Document document ) {
+  public void setDocument(Document document) {
     this.document = document;
   }
 
-  public void setBindingType( Binding.Type type ) {
+  public void setBindingType(Binding.Type type) {
     this.type = type;
   }
 
-  private Binding applyBinding( Binding b, BindingConvertor... converters ) {
-    b.setBindingType( type );
-    b.setExceptionHandler( this.exceptionHandler );
-    if ( converters != null && converters.length > 0 ) {
-      b.setConversion( converters[0] );
+  private Binding applyBinding(Binding b, BindingConvertor... converters) {
+    b.setBindingType(type);
+    b.setExceptionHandler(this.exceptionHandler);
+    if (converters != null && converters.length > 0) {
+      b.setConversion(converters[0]);
     }
     b.initialize();
-    document.addInitializedBinding( b );
+    document.addInitializedBinding(b);
     return b;
   }
 
   private void constraintsCheck() {
-    if ( document == null ) {
-      throw new IllegalArgumentException(
-          "document is null.  Did you forget to set the document on the DefaultBindingFactory?" );
+    if (document == null) {
+      throw new IllegalArgumentException("document is null.  Did you forget to set the document on the DefaultBindingFactory?");
     }
   }
 
-  public Binding createBinding( String sourceId, String sourceAttr, String targetId, String targetAttr,
-      BindingConvertor... converters ) {
+  public Binding createBinding(String sourceId, String sourceAttr, String targetId, String targetAttr, BindingConvertor... converters) {
     constraintsCheck();
-    Binding b =
-        new DefaultBinding( document.getElementById( sourceId ), sourceAttr, document.getElementById( targetId ),
-            targetAttr );
-    return applyBinding( b, converters );
+    Binding b = new DefaultBinding(document.getElementById(sourceId), sourceAttr, document.getElementById(targetId), targetAttr);
+    return applyBinding(b, converters);
   }
 
-  public Binding createBinding( Object source, String sourceAttr, String targetId, String targetAttr,
-      BindingConvertor... converters ) {
+  public Binding createBinding(Object source, String sourceAttr, String targetId, String targetAttr, BindingConvertor... converters) {
     constraintsCheck();
-    Binding b = new DefaultBinding( source, sourceAttr, document.getElementById( targetId ), targetAttr );
-    return applyBinding( b, converters );
+    Binding b = new DefaultBinding(source, sourceAttr, document.getElementById(targetId), targetAttr);
+    return applyBinding(b, converters);
   }
 
-  public Binding createBinding( String sourceId, String sourceAttr, Object target, String targetAttr,
-      BindingConvertor... converters ) {
+  public Binding createBinding(String sourceId, String sourceAttr, Object target, String targetAttr, BindingConvertor... converters) {
     constraintsCheck();
-    Binding b = new DefaultBinding( document.getElementById( sourceId ), sourceAttr, target, targetAttr );
-    return applyBinding( b, converters );
+    Binding b = new DefaultBinding(document.getElementById(sourceId), sourceAttr, target, targetAttr);
+    return applyBinding(b, converters);
   }
 
-  public Binding createBinding( Object source, String sourceAttr, Object target, String targetAttr,
-      BindingConvertor... converters ) {
-    Binding b = new DefaultBinding( source, sourceAttr, target, targetAttr );
-    return applyBinding( b, converters );
+  public Binding createBinding(Object source, String sourceAttr, Object target, String targetAttr, BindingConvertor... converters) {
+    Binding b = new DefaultBinding(source, sourceAttr, target, targetAttr);
+    return applyBinding(b, converters);
   }
 
-  public void setExceptionHandler( BindingExceptionHandler handler ) {
+  public void setExceptionHandler(BindingExceptionHandler handler) {
     this.exceptionHandler = handler;
   }
 
