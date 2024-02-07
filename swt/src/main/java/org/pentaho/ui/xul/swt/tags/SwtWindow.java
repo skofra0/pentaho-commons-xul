@@ -209,8 +209,6 @@ public class SwtWindow extends AbstractSwtXulContainer implements XulWindow {
 
   public void setAppicon( String icon ) {
 
-    // TODO Auto-generated method stub
-
   }
 
   Shell getShell() {
