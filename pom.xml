@@ -44,8 +44,8 @@
 
 		<jandex.version>3.1.7</jandex.version>
 
-		<slf4j.version>2.0.12</slf4j.version>
-		<logback.version>1.5.3</logback.version>
+		<slf4j.version>2.0.13</slf4j.version>
+		<logback.version>1.5.6</logback.version>
 		<dom4j.version>2.1.4</dom4j.version>
 		<jaxen.version>2.0.0</jaxen.version>
 
@@ -290,7 +290,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
-				<version>3.3.0</version>
+				<version>3.3.1</version>
 				<executions>
 					<execution>
 						<id>attach-sources</id>
@@ -328,12 +328,12 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.12.1</version>
+					<version>3.13.0</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-jar-plugin</artifactId>
-					<version>3.3.0</version>
+					<version>3.4.1</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -355,7 +355,7 @@
 				<plugin>
 					<groupId>org.jacoco</groupId>
 					<artifactId>jacoco-maven-plugin</artifactId>
-					<version>0.8.11</version>
+					<version>0.8.12</version>
 					<configuration>
 						<destFile>${sonar.jacoco.reportPath}</destFile>
 					</configuration>
@@ -372,7 +372,7 @@
 				<plugin>
 					<groupId>org.owasp</groupId>
 					<artifactId>dependency-check-maven</artifactId>
-					<version>9.0.9</version>
+					<version>9.1.0</version>
 				</plugin>
 				<plugin>
 					<artifactId>maven-resources-plugin</artifactId>
