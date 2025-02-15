@@ -6,12 +6,12 @@
 	<parent>
 		<groupId>no.deem.integrator</groupId>
 		<artifactId>commons-xul</artifactId>
-		<version>9.6.0</version>
+		<version>9.6.1</version>
 	</parent>
 
 	<groupId>no.deem.integrator</groupId>
 	<artifactId>commons-xul-core</artifactId>
-	<version>9.6.0</version>
+	<version>9.6.1</version>
 
 	<name>Commons XUL Core</name>
 
